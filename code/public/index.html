@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>States of the United States</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <script>
+        // this function allows to switch between the graphical map and Google map
+        function mainMap() {
+            if (document.getElementById('displayMap').textContent === 'Switch the map to Google Map') {
+                document.getElementById('map').innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13004082.928417291!2d-104.65713107818928!3d37.275578278180674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sus!4v1650640792220!5m2!1sen!2sus" width="95%" height="510" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                document.getElementById('displayMap').innerHTML = 'Switch the map to the graphical map';
+                document.getElementById('message').innerHTML = '';
+            } else {
+                document.getElementById('map').innerHTML = '<img src="./united-states-map-with-state-names.gif" alt="united-states-map-with-state-names" width="85%" height="85%">';
+                document.getElementById('displayMap').innerHTML = 'Switch the map to Google Map';
+                document.getElementById('message').innerHTML = 'Be patient when choosing Google Map, it takes a second to get there!<br>We need to connect to the external source!';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>States of the United States</h1>
+        <h3>Welcome! On this application you can find information<br>about all 50 states of the United States.</h3>
+    </header> 
+    <div id="map"><img src="./united-states-map-with-state-names.gif" alt="united-states-map-with-state-names" width="85%" height="85%"></div>
+    <p id="message">Be patient when choosing Google Map, it takes a second to get there!<br>We need to connect to the external source!</p>
+    <button><a href="#" onClick="mainMap()" id="displayMap">Switch the map to Google Map</a></button>
+    <br>
+    <br>
+    <br>
+    <p><b>Choose the state you are interested in by clicking the circle to the right of the state<br>and pressing the submit button below the table</b></p>
+
+    <form action="http://localhost:3000/state_info" method="GET">
+        <table id="indexTable">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>State</th>
+                    <th>State</th>
+                    <th>State</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alabama<input type="radio" name="state" id="Alabama" value="Alabama"></td>
+                    <td>Alaska<input type="radio" name="state" id="Alaska" value="Alaska"></td>
+                    <td>Arizona<input type="radio" name="state" id="Arizona" value="Arizona"></td>
+                    <td>Arkansas<input type="radio" name="state" id="Arkansas" value="Arkansas"></td>
+                    <td>California<input type="radio" name="state" id="California" value="California"></td>
+                </tr>
+                <tr>
+                    <td>Colorado<input type="radio" name="state" id="Colorado" value="Colorado"></td>
+                    <td>Connecticut<input type="radio" name="state" id="Connecticut" value="Connecticut"></td>
+                    <td>Delaware<input type="radio" name="state" id="Delaware" value="Delaware"></td>
+                    <td>Florida<input type="radio" name="state" id="Florida" value="Florida"></td>
+                    <td>Georgia<input type="radio" name="state" id="Georgia" value="Georgia"></td>
+                </tr>
+                <tr>
+                    <td>Hawaii<input type="radio" name="state" id="Hawaii" value="Hawaii"></td>
+                    <td>Idaho<input type="radio" name="state" id="Idaho" value="Idaho"></td>
+                    <td>Illinois<input type="radio" name="state" id="Illinois" value="Illinois"></td>
+                    <td>Indiana<input type="radio" name="state" id="Indiana" value="Indiana"></td>
+                    <td>Iowa<input type="radio" name="state" id="Iowa" value="Iowa"></td>
+                </tr>
+                <tr>
+                    <td>Kansas<input type="radio" name="state" id="Kansas" value="Kansas"></td>
+                    <td>Kentucky<input type="radio" name="state" id="Kentucky" value="Kentucky"></td>
+                    <td>Louisiana<input type="radio" name="state" id="Louisiana" value="Louisiana"></td>
+                    <td>Maine<input type="radio" name="state" id="Maine" value="Maine"></td>
+                    <td>Maryland<input type="radio" name="state" id="Maryland" value="Maryland"></td>
+                </tr>
+                <tr>
+                    <td>Massachusetts<input type="radio" name="state" id="Massachusetts" value="Massachusetts"></td>
+                    <td>Michigan<input type="radio" name="state" id="Michigan" value="Michigan"></td>
+                    <td>Minnesota<input type="radio" name="state" id="Minnesota" value="Minnesota"></td>
+                    <td>Mississippi<input type="radio" name="state" id="Mississippi" value="Mississippi"></td>
+                    <td>Missouri<input type="radio" name="state" id="Missouri" value="Missouri"></td>
+                </tr>
+                <tr>
+                    <td>Montana<input type="radio" name="state" id="Montana" value="Montana"></td>
+                    <td>Nebraska<input type="radio" name="state" id="Nebraska" value="Nebraska"></td>
+                    <td>Nevada<input type="radio" name="state" id="Nevada" value="Nevada"></td>
+                    <td>New Hampshire<input type="radio" name="state" id="New Hampshire" value="New Hampshire"></td>
+                    <td>New Jersey<input type="radio" name="state" id="New Jersey" value="New Jersey"></td>
+                </tr>
+                <tr>
+                    <td>New Mexico<input type="radio" name="state" id="New Mexico" value="New Mexico"></td>
+                    <td>New York<input type="radio" name="state" id="New York" value="New York"></td>
+                    <td>North Carolina<input type="radio" name="state" id="North Carolina" value="North Carolina"></td>
+                    <td>North Dakota<input type="radio" name="state" id="North Dakota" value="North Dakota"></td>
+                    <td>Ohio<input type="radio" name="state" id="Ohio" value="Ohio"></td>
+                </tr>
+                <tr>
+                    <td>Oklahoma<input type="radio" name="state" id="Oklahoma" value="Oklahoma"></td>
+                    <td>Oregon<input type="radio" name="state" id="Oregon" value="Oregon"></td>
+                    <td>Pennsylvania<input type="radio" name="state" id="Pennsylvania" value="Pennsylvania"></td>
+                    <td>Rhode Island<input type="radio" name="state" id="Rhode Island" value="Rhode Island"></td>
+                    <td>South Carolina<input type="radio" name="state" id="South Carolina" value="South Carolina"></td>
+                </tr>
+                <tr>
+                    <td>South Dakota<input type="radio" name="state" id="South Dakota" value="South Dakota"></td>
+                    <td>Tennessee<input type="radio" name="state" id="Tennessee" value="Tennessee"></td>
+                    <td>Texas<input type="radio" name="state" id="Texas" value="Texas"></td>
+                    <td>Utah<input type="radio" name="state" id="Utah" value="Utah"></td>
+                    <td>Vermont<input type="radio" name="state" id="Vermont" value="Vermont"></td>
+                </tr>
+                <tr>
+                    <td>Virginia<input type="radio" name="state" id="Virginia" value="Virginia"></td>
+                    <td>Washington<input type="radio" name="state" id="Washington" value="Washington"></td>
+                    <td>West Virginia<input type="radio" name="state" id="West Virginia" value="West Virginia"></td>
+                    <td>Wisconsin<input type="radio" name="state" id="Wisconsin" value="Wisconsin"></td>
+                    <td>Wyoming<input type="radio" name="state" id="Wyoming" value="Wyoming" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">I'm choosing the state from the list</button>
+        <br> 
+    </form>
+    <br>
+    <br>
+    
+    <form action="http://localhost:3000/state_info" method="GET">
+        <br>
+        <p><b>Or, press the button below to choose a random state!</b></p>
+        <button type="submit">I'm choosing a random state</button>
+        <br>
+        <br>
+    </form>
+
+    <footer>
+        <p>Our site is still is in progress, we are constantly adding new features to it.
+            <br>If you do not find the information you are looking for,
+            <br>come back and check again, it might be available next time.
+        </p>
+        <p>Source: Wikipedia, Google Map,<br>the source of the graphical map is geology.com</p>
+        <p>©2022 Patrycjusz Bachleda</p>
+    </footer>
+</body>
+</html>

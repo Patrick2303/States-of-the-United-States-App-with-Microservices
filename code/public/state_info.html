@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>States of the United States</title>
+    <link href="style/style1.css" rel="stylesheet" type="text/css" />
+    <script src="script.txt"></script>
+</head>
+<body>
+    <header>
+        <h1>States of the United States</h1>
+        <h3>Welcome! On this application you can find information<br>about all 50 states of the United States.</h3>
+    </header>   
+
+    <button><a href="./index.html">Click here to return to Home Page</a></button>
+    <h2 id="stateName"></h2>  
+    <iframe id="map" src="" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>In case you got lost exploring the map, click the button below to reset it.</p>
+    <button><a href="./state_info.html">Reset the map!</a></button>
+    <br><br><br><br>
+
+    <table>
+        <legend id="flag&facts"></legend>
+        <td>
+            <br><br><br><iframe id="flag" src="" type="text/html" width="300" height="200" style="border:0"></iframe>
+        </td>
+        <td>
+            <br><br><embed id="stateFacts" src="stateFacts.txt" type="text/html" width="100%" height="200" style="border:0;">
+        </td>
+    </table><br>
+    
+    <embed id="stateInfo" src="stateData.txt" width="90%" height="600px" style="border:0">
+    
+    <footer>
+        <p>Our site is still is in progress, we are constantly adding new features to it.
+            <br>If you do not find the information you are looking for,
+            <br>come back and check again, it might be available next time.
+        </p>
+        <p>Source: Wikipedia, Google Map</p>
+        <p>©2022 Patrycjusz Bachleda</p>
+    </footer>
+</body>
+</html>

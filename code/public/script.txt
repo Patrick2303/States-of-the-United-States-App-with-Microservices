@@ -1,0 +1,11 @@
+const welcome = 'Welcome to Illinois!';
+const flagName = '<b>The flag of Illinois & quick facts about the state (source Wikipedia):</b>';
+const data = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142438.314765886!2d-91.5094895972153!3d39.72195994893755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois!5e0!3m2!1sen!2sus!4v1650417093663!5m2!1sen!2sus";
+const data2 = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Illinois.svg/250px-Flag_of_Illinois.svg.png";
+
+window.onload = function () {
+   document.getElementById('stateName').innerHTML = welcome;
+   document.getElementById('map').src=data;
+   document.getElementById('flag').src=data2;
+   document.getElementById('flag&facts').innerHTML = flagName;
+};
